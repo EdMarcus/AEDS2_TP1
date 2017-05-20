@@ -13,7 +13,7 @@ import java.util.*;
  * @author Édlon
  */
 public class Teste {
-    public static void main(String args[]) throws IOException{
+    public static void main(String args[]) {
         Mensagem.escreve("mensagem.txt");
     }
 }

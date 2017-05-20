@@ -10,21 +10,21 @@ import java.io.*;
  */
 public class Mensagem {
 
-    public static void escreve(String caminho) throws IOException {
+    public static void escreve(String caminho) {
         try {
-            BufferedWriter buffWrite = new BufferedWriter(new FileWriter(caminho));
+            BufferedWriter mensagem = new BufferedWriter(new FileWriter(caminho));
             String linha = "";
             Scanner in = new Scanner(System.in);
             System.out.println("Escreva sua mensagem e digite fim para terminar: ");
             while (!linha.equals("fim")) {
                 linha = in.nextLine();
                 if (!linha.equals("fim")) {
-                    buffWrite.write(linha, 0, linha.length());
-                    buffWrite.flush();
-                    buffWrite.newLine();
+                    mensagem.write(linha, 0, linha.length());
+                    mensagem.flush();
+                    mensagem.newLine();
                 }
             }
-            buffWrite.close();
+            mensagem.close();
         }catch(IOException e){
             e.printStackTrace();
         }
