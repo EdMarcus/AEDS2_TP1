@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package cifravigenere;
 
 import java.io.*;
@@ -10,10 +6,13 @@ import java.util.*;
 
 /**
  *
- * @author Édlon
+ * @author Édlon Marcus Maia de Sá Curso: Engenharia de Computação Matrícula:
+ * 16.2.8258
  */
 public class Teste {
     public static void main(String args[]) {
         Mensagem.escreve("mensagem.txt");
+        Vigenere.cifrar("mensagem.txt", "cifrada.txt", "ovo");
+        Vigenere.decifrar("cifrada.txt", "decifrada.txt", "ovo");
     }
 }

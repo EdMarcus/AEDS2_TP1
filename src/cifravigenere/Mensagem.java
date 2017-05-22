@@ -18,6 +18,7 @@ public class Mensagem {
             System.out.println("Escreva sua mensagem e digite fim para terminar: ");
             while (!linha.equals("fim")) {
                 linha = in.nextLine();
+                linha.toUpperCase();
                 if (!linha.equals("fim")) {
                     mensagem.write(linha, 0, linha.length());
                     mensagem.flush();
